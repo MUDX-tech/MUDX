@@ -29,7 +29,7 @@ jobs:
 
       - name: Fetch verified programs
         env:
-          MAINNET_RPC_URL: ${{ secrets.MAINNET_RPC_URL }}
+          MAINNET_RPC_URL: ${{ secrets.https://mcp.solana.com/mcp }}
         run: pnpm exec tsx scripts/update-verified-programs.ts
 
       - name: Create or update pull request
@@ -45,3 +45,4 @@ jobs:
           add-paths: public/verified-programs.json
           maintainer-can-modify: true
           delete-branch: true
+          
